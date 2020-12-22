@@ -18,7 +18,8 @@ console.log(numeriPc);
 var numeriUtente = [];
 
 // Creo un ciclo per i numeri dell'utente che vanno pushati
-// solo se non li ripete
+// solo se non li ripete e se inserisce un numero vietato
+// il gioco si ferma
 var semaforo = true;
 
 while (numeriUtente.length < 6 && semaforo == true) {
@@ -33,7 +34,14 @@ while (numeriUtente.length < 6 && semaforo == true) {
    alert('hai già inserito questo numero, \ninseriscine uno nuovo');
  }
 
-
-
 }
 console.log(numeriUtente);
+
+// Creo un contatore con il numero di volte in cui è stato numeroInserito
+// il numero corretto e se il giocatore ha vinto o perso
+
+if (numeriUtente.length == 6) {
+  console.log('Hai vinto!');
+}else {
+  console.log('Hai perso con' + ' ' + numeriUtente.length + ' ' + 'tentativi');
+}
