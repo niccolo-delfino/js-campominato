@@ -22,11 +22,11 @@ var numeriUtente = [];
 // il gioco si ferma
 var semaforo = true;
 
-while (numeriUtente.length < 6 && semaforo == true) {
-  var numeroInserito = parseInt(prompt("inserisci qui x numeri"));
+while (numeriUtente.length < 84 && semaforo == true) {
+  var numeroInserito = parseInt(prompt("inserisci qui 84 numeri"));
 
   if (numeriPc.includes(numeroInserito) == true) {
-    alert('hai perso');
+    alert('BOOM!\nHai perso');
     semaforo = false;
   } else if (numeriUtente.includes(numeroInserito) == false){
    numeriUtente.push(numeroInserito);
@@ -40,7 +40,7 @@ console.log(numeriUtente);
 // Creo un contatore con il numero di volte in cui è stato numeroInserito
 // il numero corretto e se il giocatore ha vinto o perso
 
-if (numeriUtente.length == 6) {
+if (numeriUtente.length == 84) {
   console.log('Hai vinto!');
 }else {
   console.log('Hai perso con' + ' ' + numeriUtente.length + ' ' + 'tentativi');
