@@ -13,3 +13,23 @@ while (numeriPc.length < 16) {
  }
 }
 console.log(numeriPc);
+
+// Creo un array per i numeri dell'utente
+var numeriUtente = [];
+
+// Creo un ciclo per i numeri dell'utente che vanno pushati
+// solo se non li ripete
+var semaforo = true;
+
+while (numeriUtente.length < 6 && semaforo == true) {
+  var numeroInserito = parseInt(prompt("inserisci qui x numeri"));
+
+  if (numeriUtente.includes(numeroInserito) == false){
+   numeriUtente.push(numeroInserito);
+ }else {
+   alert('hai già inserito questo numero, \ninseriscine uno nuovo');
+   sentinella = false;
+ }
+
+}
+console.log(numeriUtente);
