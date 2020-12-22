@@ -24,12 +24,16 @@ var semaforo = true;
 while (numeriUtente.length < 6 && semaforo == true) {
   var numeroInserito = parseInt(prompt("inserisci qui x numeri"));
 
-  if (numeriUtente.includes(numeroInserito) == false){
+  if (numeriPc.includes(numeroInserito) == true) {
+    alert('hai perso');
+    semaforo = false;
+  } else if (numeriUtente.includes(numeroInserito) == false){
    numeriUtente.push(numeroInserito);
- }else {
+ } else {
    alert('hai già inserito questo numero, \ninseriscine uno nuovo');
-   sentinella = false;
  }
+
+
 
 }
 console.log(numeriUtente);
